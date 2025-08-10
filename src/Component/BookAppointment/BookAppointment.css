@@ -1,0 +1,165 @@
+.book-outer {
+  width: 100%;
+  background: #fff;
+  padding: 60px 0 50px 0;
+}
+
+.book-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.book-pretitle {
+  font-size: 1.3rem;
+  color: #5b544e;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.book-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #282828;
+  font-family: 'Cormorant Garamond', serif;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.book-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.book-info {
+  flex: 1;
+  min-width: 245px;
+  max-width: 340px;
+}
+
+.info-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Cormorant Garamond', serif;
+  color: #35312e;
+  margin-bottom: 12px;
+}
+
+.info-text {
+  font-size: 1.3rem;
+  color: #2b2b2b;
+  margin-bottom: 13px;
+}
+
+.info-hours {
+  color: #868686;
+  font-size: 1.1rem;
+}
+
+/* Form Styles */
+.spa-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-width: 260px;
+  max-width: 370px;
+  background: #fff;
+  padding: 30px 26px 22px 26px;
+  box-shadow: 0 6px 28px #f5d5c740;
+  border-radius: 18px;
+  margin: 0 auto;
+}
+.spa-form label {
+  font-weight: 600;
+  font-size: 1.07rem;
+  color: #5b544e;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.spa-form input {
+  padding: 9px 13px;
+  font-size: 1rem;
+  border: 1.5px solid #e1ddd7;
+  border-radius: 7px;
+  background: #fff6f2;
+  outline: none;
+  margin-top: 3px;
+  transition: border 0.2s;
+}
+.spa-form input:focus {
+  border-color: #ffa99c;
+}
+.input-error {
+  color: #e45457;
+  font-size: .96rem;
+  padding-left: 2px;
+}
+
+.spa-form button[type="submit"] {
+  margin-top: 5px;
+  background: #ffa99c;
+  color: #fff;
+  border: none;
+  font-size: 1.11rem;
+  font-weight: 700;
+  padding: 13px 0;
+  border-radius: 23px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px #fad7ca46;
+  letter-spacing: .5px;
+  transition: background 0.2s;
+}
+.spa-form button[type="submit"]:hover {
+  background: #ff8667;
+}
+
+/* Responsive for Tablet/Mobile */
+@media (max-width: 900px) {
+  .book-content {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+  .book-info,
+  .spa-form {
+    width: 100%;
+    max-width: 300px;
+    min-width: unset;
+  }
+  .spa-form {
+    padding: 22px 12px 18px 12px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-header {
+    margin-bottom: 18px;
+  }
+  .book-title {
+    font-size: 1.70rem;
+  }
+  .book-pretitle {
+    font-size: 1.2rem;
+  }
+  .book-content {
+    gap: 20px;
+  }
+  .spa-form {
+    padding: 13px 3px 13px 3px;
+    border-radius: 11px;
+    box-shadow: 0 3px 14px #f5d5c740;
+  }
+  .info-title {
+    font-size: 1.4rem;
+  }
+  .info-text, .info-hours {
+    font-size: 1.1rem;
+  }
+}

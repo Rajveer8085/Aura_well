@@ -1,0 +1,95 @@
+/* HeroSection.css */
+
+
+.hero-bg {
+  background-image: url(../../assets/imgs/spa-5.jpg);
+    background-repeat: no-repeat;
+  background-size: cover; /* or cover */
+  background-position: left bottom;
+  background-color: #fef1ec;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
+  text-align: center;
+  position: relative;
+  /* height: 100px; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center; */
+  /* background-repeat: no-repeat; */
+  
+}
+
+.hero-content {
+/* padding-bottom: 700px; */
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #303030;
+}
+
+.hero-pretitle {
+  font-size: 1.67rem;
+  color: #514135;
+  letter-spacing: .4px;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-size: 3.3333333333333rem;
+  color: #e58f8e;
+  font-family: 'Cormorant Garamond', serif;
+  margin: 10px 0 17px 0;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  color: #7b6354;
+  margin-bottom: 18px;
+}
+.hero-contact {
+  font-size: 30px;
+  color: #e58f8e;
+  font-weight: 600;
+  margin: 18px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.call-icon {
+  font-size: 1.3em;
+}
+
+/* Background image of woman on bed & floral design */
+/* .hero-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 52%;
+  height: 435px;
+  background: url('your_woman_image.jpg') no-repeat bottom right / cover;
+  opacity: 0.96;
+  z-index: 1;
+  pointer-events: none;
+} */
+
+/* .hero-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('your_flower_light.png') no-repeat left bottom/48%, url('your_flower_right_light.png') no-repeat right bottom/39%;
+  opacity: 0.25;
+  z-index: 0;
+} */

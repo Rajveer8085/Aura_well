@@ -1,0 +1,152 @@
+.therapy-main {
+  padding-top: 100px;
+}
+
+.therapy-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+}
+
+/* Row that contains each image-info pair */
+.therapy-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 650px;
+}
+
+/* Left image card */
+.therapy-img-card img {
+  width: 250px;
+  /* height: 200px; */
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px #ecd8ceb0;
+  background: #fff;
+  display: block;
+}
+
+/* Right info card */
+.therapy-info-card {
+  background: #fff6f2;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px #ecd8ceb0;
+  padding: 35px 36px 28px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 220px;
+  max-width: 300px;
+  text-align: left;
+}
+
+/* Inner content */
+.therapy-icon {
+  font-size: 2rem;
+  color: #e7a88a;
+  margin-bottom: 12px;
+}
+
+.therapy-card-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.28rem;
+  font-weight: 700;
+  color: #59493b;
+  margin-bottom: 8px;
+}
+
+.therapy-card-desc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  color: #7c6b5c;
+  margin-bottom: 18px;
+}
+
+.therapy-card-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  color: #eaa78a;
+  font-weight: 700;
+}
+
+.therapy-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.therapy-pretitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 1.9rem;
+  color: #766658;
+  letter-spacing: 0.01em;
+  margin-bottom: 0px;
+}
+
+.therapy-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  font-size: 2.9rem;
+  line-height: 1.1;
+  color: #322f2f;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.therapy-desc {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  color: #6c5b4f;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+}
+
+/* CTA Button */
+.therapy-cta {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.therapy-cta-btn {
+  background-color: #f7a999;
+  color: white;
+  border: none;
+  border-radius: 28px;
+  padding: 14px 48px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(247, 169, 153, 0.5);
+  transition: background-color 0.25s ease;
+}
+
+.therapy-cta-btn:hover {
+  background-color: #e28778;
+}
+
+/* Responsive: Stack image-info cards vertical below 900px */
+@media (max-width: 900px) {
+  .therapy-row {
+    flex-direction: column;
+    align-items: center;
+    max-width: 97vw;
+  }
+
+  .therapy-img-card img,
+  .therapy-info-card {
+    max-width: 75vw;
+    width: 70vw;
+  }
+  .therapy-cta-btn{
+  padding: 14px 30px;   
+  }
+}

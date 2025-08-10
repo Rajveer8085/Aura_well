@@ -1,0 +1,91 @@
+.appointment-section {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 43px 0 0 0;
+  position: relative;
+}
+
+.appointment-content {
+  z-index: 2;
+  margin-bottom: 18px;
+}
+
+.appointment-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.90rem;
+  color: #363636;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.appointment-title {
+  font-size: 2.55rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400;
+  color: #2c2c2c;
+  margin: 0 0 12px 0;
+}
+
+.appointment-subtitle {
+  font-size: 1.90rem;
+  color: #363636;
+  font-weight: 500;
+  margin-bottom:9px;
+}
+
+.appointment-info {
+  color: #888;
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+}
+
+.appt-phone {
+  color: #e58f8e;
+  font-weight: 600;
+}
+
+.appointment-button {
+  background: #ffa99c;
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 12px 40px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 16px;
+  margin-top: 2px;
+  transition: background 0.15s;
+  box-shadow: 0 1px 8px #ffdacf60;
+  letter-spacing: .5px;
+}
+
+.appointment-button:hover {
+  background: #ff9387;
+}
+
+/* Spa banner image (bottom) */
+.appointment-img-wrap img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto -4px auto;
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .appointment-content {
+    padding: 0 12px;
+  }
+.appointment-button{
+  padding: 12px 30px;
+}
+  .appointment-img-wrap img {
+    max-width: 95vw;
+    height: 100px;
+  }
+}

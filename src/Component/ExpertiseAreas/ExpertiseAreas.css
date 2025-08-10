@@ -1,0 +1,94 @@
+.expertise-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 55px 0 50px 0;
+  gap: 55px;
+}
+
+.expertise-img img {
+  width: 600px;
+  max-width: 90vw;
+  border-radius: 14px;
+  background: #fff6f2;
+}
+
+.expertise-content {
+  min-width: 300px;
+  flex: 1;
+}
+
+.expertise-title {
+  font-size: 2.8rem;
+  color: #363636;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.expertise-divider {
+  width: 115px;
+  height: 3px;
+  background: #e58f8e;
+  margin: 10px 0 18px 0;
+  border-radius: 1.5px;
+}
+
+.expertise-desc {
+  font-size: 1.18rem;
+  color: #7b6354;
+  margin-bottom: 22px;
+}
+
+.expertise-list {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.expertise-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.icon {
+  font-size: 2.8rem;
+  color: #e58f8e;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.expertise-item h3 {
+  margin: 0;
+  font-size:30px;
+  color: #514135;
+  font-weight: 600;
+}
+
+.expertise-item p {
+  margin: 3px 0 0 0;
+  color: #7b6354;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+  .expertise-section {
+    flex-direction: column;
+    gap: 24px;
+    padding: 30px 10px;
+  }
+
+  .expertise-img img {
+    width: 220px;
+  }
+  .expertise-title{
+    font-size:2.6rem;
+  }
+}
