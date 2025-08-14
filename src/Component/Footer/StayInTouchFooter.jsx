@@ -32,7 +32,7 @@ export default function StayInTouchFooter() {
           </div>
         </div>
         <div className="footer-copyright">
-          Copyright © 2025 Spa | Powered by Spa
+          Copyright © 2025 Spa | Powered by RJVR
         </div>
       </div>
     </footer>

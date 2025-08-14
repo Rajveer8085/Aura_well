@@ -1,0 +1,198 @@
+/* Container with soft background and subtle shadow */
+.book-section {
+    /* width: 100%; */
+    min-height: 90vh;
+    /* background: linear-gradient(135deg, #fff6f2 65%, #fdeae6 100%); */
+    background: url(../../assets/imgs/spa-bg.avif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Central container */
+.book-container {
+    max-width: 960px;
+  width: 100%;
+  /* background: #fff; */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 40px rgba(253, 195, 180, 0.5);
+  border-radius: 30px;
+  padding: 48px 48px 40px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Header text alignment */
+.book-header {
+  text-align: center;
+  color: #6e5850;
+}
+.book-pretitle {
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.book-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #d96a6e;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+.book-subtitle {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #9a7f7a;
+  margin-top: 0;
+  font-style: italic;
+  letter-spacing: 0.04em;
+}
+
+/* Layout for info and form */
+.book-body {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+/* Info panel */
+.book-info {
+  flex: 1 1 280px;
+  max-width: 360px;
+  /* background: #fff3ed; */
+  border-radius: 20px;
+  padding: 30px 26px;
+  /* box-shadow: 0 6px 24px rgba(253, 195, 180, 0.4); */
+  color: #86356e;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.info-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #ca123a;
+  letter-spacing: 0.03em;
+}
+.info-text {
+    font-size: 1.15rem;
+    color: #ffffff;
+  line-height: 1.5;
+
+}
+.info-hours {
+  font-size: 1rem;
+  font-style: italic;
+  color: #f10e3f;
+  margin-top: 8px;
+}
+
+/* Form styling */
+.book-form {
+  flex: 1 1 350px;
+  /* background: #fff6f2; */
+  border-radius: 26px;
+  padding: 30px 36px;
+  box-shadow: 0 8px 44px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 250, 250, 0.432);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.book-form select {
+  appearance: none;
+  background-color: #fff9f6;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' ... >"); /* Optional custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 14px;
+  cursor: pointer;
+}
+.form-label {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #ec5b45;
+  margin-bottom: 4px;
+}
+.form-input {
+  padding: 12px 18px;
+  font-size: 1.1rem;
+  border: 1.8px solid #ebd9d4;
+  border-radius: 12px;
+  background: #fff9f6;
+  outline: none;
+  transition: border-color 0.25s ease;
+  box-shadow: inset 0 2px 10px rgb(255 215 196 / 0.3);
+}
+.form-input:focus {
+  border-color: #d96a6e;
+  box-shadow: 0 0 14px #f9afaa88;
+}
+.form-error {
+    min-height: 12px;  /* space reserve */
+  font-size: 1rem;
+  color: #d84b4b;
+  margin-top: 4px;
+  margin-left: 7px;
+}
+
+
+/* Submit button */
+.submit-btn {
+  margin-top: 14px;
+  background: #d96a6e;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  padding: 16px 0;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  box-shadow: 0 6px 22px #fac3be;
+  transition: background-color 0.3s ease;
+}
+.submit-btn:hover {
+  background-color: #ba4e59;
+}
+
+/* Responsive - stack on smaller screens */
+@media (max-width: 900px) {
+  .book-container {
+    padding: 32px 26px;
+  }
+  .book-body {
+    flex-direction: column;
+    gap: 36px;
+  }
+  .book-info, .book-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .book-header {
+    padding: 0 12px;
+  }
+  .book-title {
+    font-size: 2rem;
+  }
+  .submit-btn {
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+  .form-input {
+    font-size: 1rem;
+    padding: 10px 14px;
+  }
+}

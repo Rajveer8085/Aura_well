@@ -11,7 +11,7 @@
   padding: 22px 24px;
   z-index: 10;
   box-sizing: border-box;
-  
+
 }
 
 /* Logo section */
@@ -19,16 +19,19 @@
   display: flex;
   align-items: center;
 }
+
 .lotus-logo {
   display: flex;
   align-items: center;
 }
+
 .lotus-logo img {
   height: 42px;
   width: auto;
   margin-right: 12px;
   border-radius: 8px;
 }
+
 .logo-text {
   font-size: 1.35rem;
   font-family: 'Cormorant Garamond', serif;
@@ -43,6 +46,7 @@
   gap: 28px;
   align-items: center;
 }
+
 .lotus-nav a {
   text-decoration: none;
   color: #7b6354;
@@ -53,6 +57,7 @@
   transition: background 0.18s, color 0.16s;
   letter-spacing: 0.1px;
 }
+
 .lotus-nav a.active,
 .lotus-nav a:hover {
   background: #ffe4dc;
@@ -62,6 +67,7 @@
 /* Appointment button */
 .appointment-btn {
   background: #ffa99c;
+  list-style: none;
   color: #fff;
   border: none;
   border-radius: 24px;
@@ -74,12 +80,18 @@
   box-shadow: 0 2.5px 11px #ffdacf44;
   letter-spacing: .5px;
 }
+
 .appointment-btn:hover {
   background: #ff9387;
 }
 
-.desktop-only { display: block; }
-.mobile-only { display: none; }
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
 
 /* Hamburger menu button */
 .nav-toggle {
@@ -90,6 +102,7 @@
   margin-left: 14px;
   z-index: 99;
 }
+
 .hamburger {
   display: block;
   width: 32px;
@@ -99,6 +112,7 @@
   position: relative;
   transition: all 0.3s;
 }
+
 .hamburger:before,
 .hamburger:after {
   content: '';
@@ -111,17 +125,28 @@
   left: 0;
   transition: all 0.3s;
 }
-.hamburger:before { top: -10px; }
-.hamburger:after { top: 10px; }
+
+.hamburger:before {
+  top: -10px;
+}
+
+.hamburger:after {
+  top: 10px;
+}
+
 /* Hamburger open anim */
 .hamburger.open {
   background: transparent;
 }
+
 .hamburger.open:before {
-  top: 0; transform: rotate(45deg);
+  top: 0;
+  transform: rotate(45deg);
 }
+
 .hamburger.open:after {
-  top: 0; transform: rotate(-45deg);
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 /* ========== MOBILE STYLING ========== */
@@ -131,7 +156,8 @@
   }
 
   .lotus-nav {
-    max-width: 360px; /* panel ki max width */
+    max-width: 360px;
+    /* panel ki max width */
     box-sizing: border-box;
     position: absolute;
     top: 60px;
@@ -146,18 +172,50 @@
     display: none;
     z-index: 99;
   }
+
   .lotus-nav.nav-open {
     display: flex;
     animation: slideDownNav 0.29s;
   }
+  
+.lotus-nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 14px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.lotus-nav a.active {
+  color: #d96a6e;
+  border-bottom: 2px solid #d96a6e;
+  font-weight: bold;
+}
+
+.desktop-only.active {
+  background-color: #d96a6e;
+  color: #fff;
+}
+
   @keyframes slideDownNav {
-    0% { opacity: 0; transform: translateY(-32px);}
-    100% { opacity: 1; transform: translateY(0);}
+    0% {
+      opacity: 0;
+      transform: translateY(-32px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
+
   .nav-toggle {
     display: block;
   }
-  .desktop-only { display: none; }
+
+  .desktop-only {
+    display: none;
+  }
+
   .mobile-only {
     display: block;
     width: 100%;
@@ -173,11 +231,17 @@
   .lotus-header {
     padding: 8px 1vw;
   }
+
   .logo-text {
     font-size: 1rem;
     letter-spacing: 0.2px;
   }
-  .lotus-logo img { height: 30px; margin-right: 6px; }
+
+  .lotus-logo img {
+    height: 30px;
+    margin-right: 6px;
+  }
+
   .lotus-nav {
     max-width: 99vw;
     padding-left: 11px;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./MassageTherapyCenter.css";
 
 import img1 from "../../assets/imgs/luxury-spa-treat.jpg";
@@ -9,9 +9,13 @@ import { GiCentaurHeart } from "react-icons/gi";
 import { GiStoneSphere } from "react-icons/gi";
 import { SiBigcartel } from "react-icons/si";
 import { GiSlumberingSanctuary } from "react-icons/gi";
+import SpaContext from "../../Store/SpaContext";
 
 
 export default function MassageTherapyCenter() {
+  
+  const {appointmentNavigate} = useContext(SpaContext)
+
   const pairs = [
     
     {
@@ -106,7 +110,7 @@ export default function MassageTherapyCenter() {
         ))}
       </div>
       <div className="therapy-cta">
-        <button className="therapy-cta-btn">BOOK AN APPOINTMENT</button>
+        <button className="therapy-cta-btn" onClick={appointmentNavigate}>BOOK AN APPOINTMENT</button>
       </div>
     </section>
   );

@@ -1,29 +1,34 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom"
 import './App.css'
 import Header from './Component/Header/Header'
-import HeroSection from './Component/Hero/Hero'
-import ExpertiseAreas from './Component/ExpertiseAreas/ExpertiseAreas'
-import ServicesSection from './Component/ServiceSection/ServicesSection'
-import AppointmentSection from './Component/AppointmentSection/AppointmentSection'
-import MassageTherapyCenter from './Component/MassageTherapyCenter/MassageTherapyCenter'
-import BookAppointment from './Component/BookAppointment/BookAppointment'
-import StayInTouchFooter from './Component/Footer/StayInTouchFooter'
+import Gallery from './pages/Gallery/Gallery'
+import Home from './pages/Home/Home'
+import SpaBooking from './pages/SpaBooking/SpaBooking'
+import { AppointmentProvider } from './Store/SpaContext'
 
 function App() {
 
   return (
-    <>
-      <Header />
-      <HeroSection />
-      <ExpertiseAreas />
-      <ServicesSection />
-      <AppointmentSection />
-      <MassageTherapyCenter />
-      <BookAppointment />
-      <StayInTouchFooter />
-    </>
+    <BrowserRouter>
+      <AppointmentProvider>
+        <Header />
+
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/gallery' element={<Gallery />} />
+          <Route path="/appointment" element={<SpaBooking />} />
+          <Route path="/about" element={<div style={{ textAlign: "center", padding: "50px" }}>
+            <h1>🚧 About Page is Under Service 🚧</h1>
+            <p>We’re working hard to bring this section live soon!</p>
+          </div>} />
+          <Route path="/contact" element={<div style={{ textAlign: "center", padding: "50px" }}>
+            <h1>🚧 contact Page is Under Service 🚧</h1>
+            <p>We’re working hard to bring this section live soon!</p>
+          </div>} />
+        </Routes>
+      </AppointmentProvider>
+    </BrowserRouter>
   )
 }
 

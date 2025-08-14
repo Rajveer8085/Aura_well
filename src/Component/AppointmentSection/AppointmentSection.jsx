@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./AppointmentSection.css";
 import spaBanner from "../../assets/imgs/divider-free-img-1024x250.png"; // Replace with your banner image
+import SpaContext from "../../Store/SpaContext";
 
 export default function AppointmentSection() {
+
+    const { appointmentNavigate } = useContext(SpaContext)
     return (
         <section className="appointment-section">
             <div className="appointment-content">
@@ -14,7 +17,7 @@ export default function AppointmentSection() {
                 <div className="appointment-info">
                     Call us on <span className="appt-phone">+917828943088</span> or simply book an appointment today itself.
                 </div>
-                <button className="appointment-button">
+                <button className="appointment-button" onClick={appointmentNavigate}>
                     BOOK AN APPOINTMENT
                 </button>
             </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header.css";
 import logo from "../../assets/imgs/generated-image.png";
+import { NavLink } from "react-router-dom";
 
 export default function Header() {
   const [navOpen, setNavOpen] = useState(false);
@@ -26,21 +27,59 @@ export default function Header() {
         <span className={`hamburger ${navOpen ? "open" : ""}`}></span>
       </button>
 
-      {/* Nav links with open/close class */}
+      {/* Nav links */}
       <nav className={`lotus-nav ${navOpen ? "nav-open" : ""}`}>
-        <a href="/" className="active" onClick={closeMenu}>Home</a>
-        <a href="/about" onClick={closeMenu}>About</a>
-        <a href="/services" onClick={closeMenu}>Services</a>
-        <a href="/contact" onClick={closeMenu}>Contact</a>
+        <NavLink
+          to="/"
+          end
+          className={({ isActive }) => (isActive ? "active" : "")}
+          onClick={closeMenu}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? "active" : "")}
+          onClick={closeMenu}
+        >
+          About
+        </NavLink>
+        <NavLink
+          to="/gallery"
+          className={({ isActive }) => (isActive ? "active" : "")}
+          onClick={closeMenu}
+        >
+          Gallery
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className={({ isActive }) => (isActive ? "active" : "")}
+          onClick={closeMenu}
+        >
+          Contact
+        </NavLink>
+
         {/* Appointment button inside nav for mobile */}
-        <button className="appointment-btn mobile-only" onClick={closeMenu}>
+        <NavLink
+          to="/appointment"
+          className={({ isActive }) =>
+            `appointment-btn mobile-only ${isActive ? "active" : ""}`
+          }
+          onClick={closeMenu}
+        >
           BOOK AN APPOINTMENT
-        </button>
+        </NavLink>
       </nav>
+
       {/* Appointment button desktop */}
-      <button className="appointment-btn desktop-only">
+      <NavLink
+        to="/appointment"
+        className={({ isActive }) =>
+          `appointment-btn desktop-only ${isActive ? "active" : ""}`
+        }
+      >
         BOOK AN APPOINTMENT
-      </button>
+      </NavLink>
     </header>
   );
 }
