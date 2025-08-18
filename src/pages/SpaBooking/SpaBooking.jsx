@@ -25,7 +25,7 @@ export default function SpaBooking() {
     const AppointmentHandler = async (Formdata) => {
         try {
             const { name, email, type, phone } = Formdata
-            await axios.post("http://localhost:3003/BookAppointment", { name, email, phone, type })
+            await axios.post("https://aura-well-server.onrender.com/BookAppointment", { name, email, phone, type })
         } catch (error) {
             console.log(error)
         }
