@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+.about-hero {
+  font-family: 'Cormorant Garamond', serif;
+  background: #fff0ef;
+  padding: 80px 20px;
+  text-align: center;
+  color: #6b4a4a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.gradient-text {
+  font-size: 4rem;
+  margin-bottom: 0;
+  font-weight: 900;
+  background: linear-gradient(90deg, #d96a6e, #f7c6c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  color: #b47b7b;
+  margin-top: 10px;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  white-space: pre-line;
+}
+
+.about-content p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  letter-spacing: 0.04em;
+  color: #7a5a57;
+}
+
+.features-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: white;
+  flex: 1 1 250px;
+  border-radius: 20px;
+  box-shadow: 0 8px 28px rgba(217, 106, 110, 0.16);
+  padding: 35px 25px;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.feature-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 48px rgba(217, 106, 110, 0.3);
+}
+
+.feature-card .icon img{
+  height:100px ;
+  margin-bottom: 18px;
+}
+
+.feature-card h3 {
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #b85a5a;
+}
+
+.feature-card p {
+  font-weight: 500;
+  color: #8b6363;
+  font-size:1.2rem;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 720px) {
+  .features-grid {
+    flex-direction: column;
+    margin-top: 35px;
+  }
+}

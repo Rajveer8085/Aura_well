@@ -6,6 +6,8 @@ import Gallery from './pages/Gallery/Gallery'
 import Home from './pages/Home/Home'
 import SpaBooking from './pages/SpaBooking/SpaBooking'
 import { AppointmentProvider } from './Store/SpaContext'
+import About from './pages/About/About'
+import Contact from './pages/Contact/Contact'
 
 function App() {
 
@@ -18,14 +20,16 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/gallery' element={<Gallery />} />
           <Route path="/appointment" element={<SpaBooking />} />
-          <Route path="/about" element={<div style={{ textAlign: "center", padding: "50px" }}>
+          <Route path="/about" element={<About /> } />
+          {/* <Route path="/about" element={<div style={{ textAlign: "center", padding: "50px" }}>
             <h1>🚧 About Page is Under Service 🚧</h1>
             <p>We’re working hard to bring this section live soon!</p>
-          </div>} />
-          <Route path="/contact" element={<div style={{ textAlign: "center", padding: "50px" }}>
+          </div>} /> */}
+          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/contact" element={<div style={{ textAlign: "center", padding: "50px" }}>
             <h1>🚧 contact Page is Under Service 🚧</h1>
             <p>We’re working hard to bring this section live soon!</p>
-          </div>} />
+          </div>} /> */}
         </Routes>
       </AppointmentProvider>
     </BrowserRouter>

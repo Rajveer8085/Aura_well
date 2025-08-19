@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+.contact-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #fff0ef, #ffe9e6);
+  font-family: 'Cormorant Garamond', serif;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 900px;
+  width: 100%;
+  background: #fff6f2;
+  border-radius: 25px;
+  box-shadow: 0 12px 40px rgba(217, 106, 110, 0.25);
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 3rem;
+  color: #d96a6e;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.contact-subtitle {
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: #b47b7b;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.contact-cards {
+  display: flex;
+  gap: 35px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  flex: 1 1 240px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(217, 106, 110, 0.14);
+  padding: 30px 20px;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 48px rgba(217, 106, 110, 0.3);
+}
+
+.contact-icon {
+  font-size: 2.8rem;
+  color: #d96a6e;
+  margin-bottom: 14px;
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #9e5e63;
+  font-weight: 600;
+}
+
+.contact-card p a {
+  color: #7a5a57;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.contact-card p a:hover {
+  color: #d96a6e;
+  text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+  .contact-cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+}

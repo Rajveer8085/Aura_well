@@ -5,6 +5,8 @@ import * as yup from "yup";
 import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios"
+import { toast, ToastContainer } from "react-toastify"
+import "react-toastify/dist/ReactToastify.css"
 
 export default function SpaBooking() {
     const initialValues = { name: "", email: "", phone: "" };
@@ -51,16 +53,20 @@ export default function SpaBooking() {
                     <Formik
                         initialValues={initialValues}
                         validationSchema={validationSchema}
-                        onSubmit={(values, actions) => {
-                            actions.resetForm();
-                            setFormValue(values)
-                            AppointmentHandler(values)
+                        onSubmit={async (values, actions) => {
+                            try {
+                                await AppointmentHandler(values);
+                                toast.success("Appointment submitted successfully! 🎉");
+                                actions.resetForm();
+                                setFormValue(values);
+                            } catch (error) {
+                                toast.error("Appointment submission failed. Please try again.");
+                            }
                         }}
                     >
                         <Form className="book-form">
                             <label htmlFor="name" className="form-label">Name</label>
                             <Field name="name" id="name" type="text" placeholder="Enter your name" className="form-input" />
-                            {/* <ErrorMessage name="name" component="div" className="form-error" /> */}
                             <div className="form-error">
                                 <ErrorMessage name="name" />
                             </div>
@@ -68,15 +74,12 @@ export default function SpaBooking() {
 
                             <label htmlFor="email" className="form-label">Email</label>
                             <Field name="email" id="email" type="email" placeholder="Enter your email" className="form-input" />
-                            {/* <ErrorMessage name="email" component="div" className="form-error" />
-                             */}
                             <div className="form-error">
                                 <ErrorMessage name="email" />
                             </div>
 
                             <label htmlFor="phone" className="form-label">Phone</label>
                             <Field name="phone" id="phone" type="tel" placeholder="10-digit phone number" className="form-input" />
-                            {/* <ErrorMessage name="phone" component="div" className="form-error" /> */}
                             <div className="form-error">
                                 <ErrorMessage name="phone" />
                             </div>
@@ -87,7 +90,6 @@ export default function SpaBooking() {
                                 <option value="inquiry">Inquiry</option>
                                 <option value="appointment">Appointment</option>
                             </Field>
-                            {/* <ErrorMessage name="type" component="div" className="form-error" /> */}
                             <div className="form-error">
                                 <ErrorMessage name="type" />
                             </div>
@@ -97,6 +99,12 @@ export default function SpaBooking() {
                     </Formik>
                 </div>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={3000}
+                hideProgressBar={false}
+                theme="colored"
+            />
         </section>
     );
 }
